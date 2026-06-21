@@ -385,3 +385,9 @@ The `core/sync/` pipeline guarantees high availability. When a user creates or m
 2. **Short-Circuit**: If offline, mutations (`POST/PATCH/DELETE`) bypass the remote datasource entirely to prevent `SocketException` crashes.
 3. **Queue & Cache**: The payload is instantly written to the local Hive cache and added to the `PendingMutation` queue.
 4. **Background Sync**: Once connectivity returns, `sync_service.dart` drains the queue, resolving local UUIDs with server-generated IDs seamlessly.
+
+## Demo
+
+Watch the GraphSphere offline-first sync and knowledge graph in action:
+
+[![GraphSphere Demo](https://img.youtube.com/vi/t2p6JgNmj5c/maxresdefault.jpg)](https://www.youtube.com/watch?v=t2p6JgNmj5c)
